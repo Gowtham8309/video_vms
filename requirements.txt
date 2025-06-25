@@ -1,0 +1,14 @@
+streamlit
+transformers>=4.30.0
+torch>=2.1.0  # Ensure PyTorch version compatible with your CUDA & flash-attn
+accelerate>=0.20.0
+Pillow
+gTTS
+huggingface_hub
+bitsandbytes # For Mistral quantization
+gTTS
+einops==0.7
+opencv
+numpy
+# flash-attn # Install this separately, see below
+# sentencepiece # Often needed by Mistral's tokenizer

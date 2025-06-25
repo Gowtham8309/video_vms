@@ -1,0 +1,13 @@
+git clone https://github.com/Wan-Video/Wan2.1.git  Wan2.1_code       # :contentReference[oaicite:0]{index=0}
+
+mkdir -p models
+git clone https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B  models/Wan2.1-T2V-1.3B   # :contentReference[oaicite:1]{index=1}
+
+# Torch with the CUDA version you have (change cu121 if needed)
+pip install torch --index-url https://download.pytorch.org/whl/cu121
+pip install -r Wan2.1_code/requirements.txt
+pip install gTTS   # optional, only if you want voice-over support
+
+python -m pip install -U einops==0.7
+
+pip install opencv-python numpy
