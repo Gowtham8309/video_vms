@@ -1,37 +1,26 @@
-# Core Frameworks
-streamlit
-gradio>=5.0.0
-dashscope
-tqdm
+cat <<EOF > requirements.txt
+# Web Frameworks
+gunicorn
+flask
+streamlit>=1.30.0
+gradio==4.29.0
 
-# Transformers & Diffusion
-transformers>=4.49.0
-tokenizers>=0.20.3
-diffusers>=0.31.0
-accelerate>=1.1.1
-sentencepiece  # Required for Mistral tokenizer (manually install if needed)
+# Audio/Video
+av
 
-# PyTorch (CUDA 12.1 specific build)
---index-url https://download.pytorch.org/whl/cu121
-torch>=2.4.0
-torchvision>=0.19.0
-bitsandbytes  # Quantization (Mistral, GGUF, etc.)
+# Core ML/DL
+tqdm==4.67.1
+transformers==4.37.0
+diffusers==0.31.0
+accelerate==0.23.0
+sentencepiece
 
 # Vision + Media Processing
-opencv-python>=4.9.0.80
-Pillow
-imageio
+opencv-python==4.7.0.72
+Pillow==9.5.0
+imageio==2.31.0
 imageio-ffmpeg
-einops==0.7
-numpy>=1.23.5,<2
+einops==0.7.0
+numpy==1.24.4
 librosa
-
-# Text & Audio
-ftfy
-gTTS  # For voice-over (optional)
-
-# Utilities
-easydict
-
-# NOTE: Install flash-attn manually as it's environment-specific:
-# pip install flash-attn --no-build-isolation --force-reinstall
+EOF
